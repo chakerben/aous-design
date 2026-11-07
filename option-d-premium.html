@@ -20,7 +20,7 @@ header{position:sticky;top:0;z-index:40;background:var(--hdr);backdrop-filter:bl
 .logo{font-family:var(--display);font-weight:700;font-size:1.9rem;line-height:1;color:var(--em)}
 .links{display:flex;gap:1.8rem;font-weight:500;font-size:.95rem;color:var(--body)}.links a.on{color:var(--em);font-weight:600}@media(max-width:860px){.links{display:none}}
 .right{display:flex;gap:.6rem;align-items:center}
-.hero{background:radial-gradient(1200px 500px at 85% 0%,rgba(217,188,106,.18),transparent 60%),linear-gradient(135deg,#0a3f36,#0f5c4f 55%,#0b4a3f);color:var(--ivory);padding:4.5rem 0 7rem;position:relative;overflow:hidden}
+.hero{background:radial-gradient(1200px 500px at 85% 0%,rgba(217,188,106,.18),transparent 60%),linear-gradient(135deg,rgba(10,63,54,.94),rgba(15,92,79,.88) 55%,rgba(11,74,63,.94)),url(https://images.unsplash.com/photo-1681395944491-aad63cd10e09?auto=format&fit=crop&w=1800&q=60) center/cover;color:var(--ivory);padding:4.5rem 0 7rem;position:relative;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.stack{display:none}}
 .kick{color:var(--gold2);font-weight:600;letter-spacing:.02em;font-size:.95rem}
 .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(3rem,7vw,5.2rem);line-height:1.1;margin:.4rem 0 .8rem;color:#fff}
@@ -38,12 +38,12 @@ header{position:sticky;top:0;z-index:40;background:var(--hdr);backdrop-filter:bl
 section{padding:3.5rem 0}.h2{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.6rem}
 h2{font-family:var(--display);font-weight:700;font-size:2.4rem;margin:0;line-height:1.1}.h2 a{color:var(--em);font-weight:600;font-size:.95rem}.sub{color:var(--muted);font-size:.95rem;margin:.2rem 0 0}
 .covers{display:grid;gap:1.2rem;grid-template-columns:repeat(5,1fr)}@media(max-width:1000px){.covers{grid-template-columns:repeat(3,1fr)}}@media(max-width:620px){.covers{grid-template-columns:repeat(2,1fr)}}
-.cv{aspect-ratio:2/3;border-radius:6px 12px 12px 6px;background:linear-gradient(160deg,color-mix(in srgb,var(--pig) 85%,#fff) 0%,var(--pig) 45%,color-mix(in srgb,var(--pig) 70%,#000) 100%);color:#fff;padding:1.1rem;display:flex;flex-direction:column;box-shadow:inset 6px 0 0 rgba(0,0,0,.18),0 14px 28px -16px rgba(0,0,0,.5);transition:transform .25s,box-shadow .25s;position:relative}
+.cv{aspect-ratio:2/3;border-radius:6px 12px 12px 6px;background-size:cover;background-position:center;background-image:linear-gradient(170deg,color-mix(in srgb,var(--pig) 35%,transparent) 0%,color-mix(in srgb,var(--pig) 75%,transparent) 55%,color-mix(in srgb,var(--pig) 95%,#000) 100%),var(--photo);color:#fff;padding:1.1rem;display:flex;flex-direction:column;box-shadow:inset 6px 0 0 rgba(0,0,0,.18),0 14px 28px -16px rgba(0,0,0,.5);transition:transform .25s,box-shadow .25s;position:relative}
 .cv:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:inset 6px 0 0 rgba(0,0,0,.18),0 26px 40px -18px rgba(0,0,0,.6)}
 .cv .n{font-size:.75rem;opacity:.75}.cv b{font-family:var(--display);font-size:1.65rem;font-weight:700;line-height:1.15;margin-top:auto}.cv small{font-family:var(--serif);font-size:.82rem;opacity:.85;line-height:1.5;margin-top:.3rem}
 .cv .c{margin-top:.8rem;padding-top:.6rem;border-top:1px solid rgba(255,255,255,.3);font-size:.75rem;color:var(--gold2)}
 .feat{display:grid;grid-template-columns:1.3fr .9fr;gap:1.6rem}@media(max-width:860px){.feat{grid-template-columns:1fr}}
-.big{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:2rem;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.big{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:2rem;box-shadow:0 1px 2px rgba(0,0,0,.03)}.big .thumb{width:calc(100% + 4rem);margin:-2rem -2rem 1.4rem;aspect-ratio:16/7;object-fit:cover;border-radius:20px 20px 0 0;display:block}
 .pill{display:inline-block;font-size:.78rem;font-weight:600;color:var(--pig);background:color-mix(in srgb,var(--pig) 12%,var(--surface));padding:.15rem .7rem;border-radius:999px}[data-theme=dark] .pill{filter:brightness(1.6)}
 .big h3{font-family:var(--display);font-size:2.3rem;font-weight:700;margin:.6rem 0 .4rem;line-height:1.15}.big .ex{font-family:var(--serif);font-size:1.15rem;line-height:1.95;color:var(--body);margin:0}
 .meta{font-size:.82rem;color:var(--muted);margin-top:.9rem}
@@ -53,7 +53,7 @@ h2{font-family:var(--display);font-weight:700;font-size:2.4rem;margin:0;line-hei
 .quote p{font-family:var(--display);font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.5;max-width:40rem;margin:0 auto;font-weight:600}.quote cite{display:block;font-style:normal;color:var(--em);font-weight:600;margin-top:1rem;font-size:.95rem}
 .parts{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}@media(max-width:760px){.parts{grid-template-columns:1fr 1fr}}
 .parts a{background:var(--surface);border:1px solid var(--line);border-inline-start:4px solid var(--em);border-radius:12px;padding:1.1rem 1.2rem}.parts b{display:block;font-family:var(--display);font-size:2rem;line-height:1;color:var(--gold);font-weight:700}.parts span{font-weight:600}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}@media(max-width:620px){.gal{grid-template-columns:1fr 1fr}}.gal div{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(160deg,var(--sand),color-mix(in srgb,var(--em) 25%,var(--sand)));display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}@media(max-width:620px){.gal{grid-template-columns:1fr 1fr}}.gal img{aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:14px;display:block;box-shadow:0 10px 24px -16px rgba(0,0,0,.5)}
 .about{display:grid;grid-template-columns:240px 1fr;gap:2.5rem;align-items:center;background:var(--sand);border-radius:24px;padding:2rem}@media(max-width:620px){.about{grid-template-columns:1fr}}
 .ph{aspect-ratio:3/4;border-radius:120px 120px 16px 16px;background:linear-gradient(160deg,#b7a98a,#7d735c);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;max-width:240px}
 .about h2{margin:.2rem 0}.about p{font-family:var(--serif);font-size:1.1rem;line-height:1.95;color:var(--body);margin:.4rem 0 1.2rem}.sig{font-family:var(--display);font-size:1.8rem;color:var(--em);font-weight:600}
@@ -86,9 +86,9 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.95rem}footer .logo{color:var(--
     <a class="btn g" href="#books">ادخل المكتبة</a><a class="btn o" href="#">من أنا؟</a>
   </div>
   <div class="stack" aria-hidden="true">
-    <div class="bk" style="background:linear-gradient(160deg,#9a4e40,#6f2e24)"><b>كتاب القضية</b><small>عن فلسطين ونكبتها ومقاومتها</small></div>
-    <div class="bk" style="background:linear-gradient(160deg,#35508a,#1f3660)"><b>كتاب المدينة</b><small>عن غمراسن وشؤونها وشجونها</small></div>
-    <div class="bk" style="background:linear-gradient(160deg,#6f7f45,#4a5a2a)"><b>كتاب البلاد</b><small>عن تونس، أرضًا وناسًا</small></div>
+    <div class="bk" style="background:linear-gradient(160deg,rgba(154,78,64,.75),rgba(111,46,36,.92)),url(https://images.unsplash.com/photo-1711130341882-3911bf268e71?auto=format&fit=crop&w=500&h=750&q=60) center/cover"><b>كتاب القضية</b><small>عن فلسطين ونكبتها ومقاومتها</small></div>
+    <div class="bk" style="background:linear-gradient(160deg,rgba(53,80,138,.7),rgba(31,54,96,.92)),url(https://images.unsplash.com/photo-1759234676695-ace1299af3f5?auto=format&fit=crop&w=500&h=750&q=60) center/cover"><b>كتاب المدينة</b><small>عن غمراسن وشؤونها وشجونها</small></div>
+    <div class="bk" style="background:linear-gradient(160deg,rgba(111,127,69,.7),rgba(74,90,42,.92)),url(https://images.unsplash.com/photo-1565459374854-6fa73a99abf5?auto=format&fit=crop&w=500&h=750&q=60) center/cover"><b>كتاب البلاد</b><small>عن تونس، أرضًا وناسًا</small></div>
   </div>
 </div></div>
 
@@ -98,23 +98,23 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.95rem}footer .logo{color:var(--
   <section id="books">
     <div class="h2"><div><h2>المكتبة</h2><p class="sub">عشرة كتب، كلّ كتاب بابٌ إلى موضوع.</p></div><a href="#">كلّ الكتب ←</a></div>
     <div class="covers">
-      <a class="cv" style="--pig:#27406B"><span class="n">01</span><b>كتاب المدينة</b><small>عن غمراسن وشؤونها وشجونها</small><span class="c">3 نصوص</span></a>
-      <a class="cv" style="--pig:#5B6B35"><span class="n">02</span><b>كتاب البلاد</b><small>عن تونس، أرضًا وناسًا</small><span class="c">نصّان</span></a>
-      <a class="cv" style="--pig:#8C3A2E"><span class="n">03</span><b>كتاب القضية</b><small>عن فلسطين ونكبتها ومقاومتها</small><span class="c">نصّان</span></a>
-      <a class="cv" style="--pig:#3F3B37"><span class="n">04</span><b>كتاب الأضداد</b><small>ضدّ الموت والنسيان، ضدّ الجحود والنكران…</small><span class="c">4 نصوص · 4 أقسام</span></a>
-      <a class="cv" style="--pig:#6B3A5B"><span class="n">05</span><b>كتاب النساء</b><small>عن نساء عرفتهنّ وقرأت عنهنّ</small><span class="c">نصّ واحد</span></a>
-      <a class="cv" style="--pig:#466784"><span class="n">06</span><b>كتاب المدرسة</b><small>عن التعليم والمعلّمين والتلاميذ</small><span class="c">نصّ واحد</span></a>
-      <a class="cv" style="--pig:#9C6B22"><span class="n">07</span><b>كتاب العمال</b><small>عن الشغل والشغّالين</small><span class="c">نصّ واحد</span></a>
-      <a class="cv" style="--pig:#2E6665"><span class="n">08</span><b>كتاب الحقوق والحريات</b><small>عمّا يُنتزع ولا يُمنح</small><span class="c">نصّ واحد</span></a>
-      <a class="cv" style="--pig:#6A4A35"><span class="n">09</span><b>كتاب الكتب</b><small>عن كتب قرأتها وكتب أحببتها</small><span class="c">نصّ واحد</span></a>
-      <a class="cv" style="--pig:#A85A36"><span class="n">10</span><b>كتاب الجمعية</b><small>عن العمل الجمعياتي وأهله</small><span class="c">نصّ واحد</span></a>
+      <a class="cv" style="--pig:#27406B;--photo:url(https://images.unsplash.com/photo-1759234676695-ace1299af3f5?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">01</span><b>كتاب المدينة</b><small>عن غمراسن وشؤونها وشجونها</small><span class="c">3 نصوص</span></a>
+      <a class="cv" style="--pig:#5B6B35;--photo:url(https://images.unsplash.com/photo-1759234676111-cfd1c1b981c5?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">02</span><b>كتاب البلاد</b><small>عن تونس، أرضًا وناسًا</small><span class="c">نصّان</span></a>
+      <a class="cv" style="--pig:#8C3A2E;--photo:url(https://images.unsplash.com/photo-1711130341882-3911bf268e71?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">03</span><b>كتاب القضية</b><small>عن فلسطين ونكبتها ومقاومتها</small><span class="c">نصّان</span></a>
+      <a class="cv" style="--pig:#3F3B37;--photo:url(https://images.unsplash.com/photo-1791407928596-13330e4f4279?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">04</span><b>كتاب الأضداد</b><small>ضدّ الموت والنسيان، ضدّ الجحود والنكران…</small><span class="c">4 نصوص · 4 أقسام</span></a>
+      <a class="cv" style="--pig:#6B3A5B;--photo:url(https://images.unsplash.com/photo-1638433429483-a188db3d3b53?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">05</span><b>كتاب النساء</b><small>عن نساء عرفتهنّ وقرأت عنهنّ</small><span class="c">نصّ واحد</span></a>
+      <a class="cv" style="--pig:#466784;--photo:url(https://images.unsplash.com/photo-1711062717319-393e424a3538?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">06</span><b>كتاب المدرسة</b><small>عن التعليم والمعلّمين والتلاميذ</small><span class="c">نصّ واحد</span></a>
+      <a class="cv" style="--pig:#9C6B22;--photo:url(https://images.unsplash.com/photo-1567042661848-7161ce446f85?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">07</span><b>كتاب العمال</b><small>عن الشغل والشغّالين</small><span class="c">نصّ واحد</span></a>
+      <a class="cv" style="--pig:#2E6665;--photo:url(https://images.unsplash.com/photo-1518601794912-1af91724e528?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">08</span><b>كتاب الحقوق والحريات</b><small>عمّا يُنتزع ولا يُمنح</small><span class="c">نصّ واحد</span></a>
+      <a class="cv" style="--pig:#6A4A35;--photo:url(https://images.unsplash.com/photo-1785707087518-0466dee85e51?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">09</span><b>كتاب الكتب</b><small>عن كتب قرأتها وكتب أحببتها</small><span class="c">نصّ واحد</span></a>
+      <a class="cv" style="--pig:#A85A36;--photo:url(https://images.unsplash.com/photo-1540634759006-203f597e1a34?auto=format&fit=crop&w=700&h=1050&q=65)"><span class="n">10</span><b>كتاب الجمعية</b><small>عن العمل الجمعياتي وأهله</small><span class="c">نصّ واحد</span></a>
     </div>
   </section>
 
   <section>
     <div class="h2"><div><h2>آخر ما كُتب</h2><p class="sub">أحدث النصوص في كلّ الكتب.</p></div><a href="#">كلّ النصوص ←</a></div>
     <div class="feat">
-      <article class="big" style="--pig:#27406B"><span class="pill">كتاب المدينة</span><h3>الجبل الذي يرانا</h3><p class="ex">في غمراسن لا تنظر أنت إلى الجبل، بل الجبل هو الذي ينظر إليك. تخرج من البيت صباحًا فتجده واقفًا في آخر الزقاق، صامتًا كجدّ لا يتكلّم إلا حين يُسأل. وحين تعود في المساء يكون قد غيّر لونه ثلاث مرّات ولم يغيّر مكانه.</p><div class="meta">14 مارس 2021 · دقيقة قراءة</div></article>
+      <article class="big" style="--pig:#27406B"><img class="thumb" src="https://images.unsplash.com/photo-1759234676695-ace1299af3f5?auto=format&fit=crop&w=1200&h=525&q=65" alt=""><span class="pill">كتاب المدينة</span><h3>الجبل الذي يرانا</h3><p class="ex">في غمراسن لا تنظر أنت إلى الجبل، بل الجبل هو الذي ينظر إليك. تخرج من البيت صباحًا فتجده واقفًا في آخر الزقاق، صامتًا كجدّ لا يتكلّم إلا حين يُسأل. وحين تعود في المساء يكون قد غيّر لونه ثلاث مرّات ولم يغيّر مكانه.</p><div class="meta">14 مارس 2021 · دقيقة قراءة</div></article>
       <div class="list">
         <a class="row" style="--pig:#A85A36"><span class="sp"></span><span><h4>اجتماع في المقهى</h4><span class="m">كتاب الجمعية · 7 أكتوبر 2023</span></span></a>
         <a class="row" style="--pig:#6A4A35"><span class="sp"></span><span><h4>كتاب على الرفّ الأعلى</h4><span class="m">كتاب الكتب · 26 فيفري 2018</span></span></a>
@@ -133,11 +133,11 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.95rem}footer .logo{color:var(--
 
   <section>
     <div class="h2"><div><h2>الصور والفيديوهات</h2><p class="sub">من غمراسن ومن الجمعية.</p></div><a href="#">المعرض ←</a></div>
-    <div class="gal"><div>صورة</div><div>صورة</div><div>فيديو</div><div>صورة</div></div>
+    <div class="gal"><img src="https://images.unsplash.com/photo-1681395944491-aad63cd10e09?auto=format&fit=crop&w=600&h=450&q=60" alt=""><img src="https://images.unsplash.com/photo-1681395527525-84a64ae0f3f0?auto=format&fit=crop&w=600&h=450&q=60" alt=""><img src="https://images.unsplash.com/photo-1565459374854-6fa73a99abf5?auto=format&fit=crop&w=600&h=450&q=60" alt=""><img src="https://images.unsplash.com/photo-1762889378249-e7ddb023843c?auto=format&fit=crop&w=600&h=450&q=60" alt=""></div>
   </section>
 
   <section>
-    <div class="about"><div class="ph">صورة الكاتب</div><div><div class="kick" style="color:var(--em)">عن الكاتب</div><h2>من أنا؟</h2><p>كاتب من غمراسن، يكتب عن مدينته وبلاده وعن فلسطين، وعن النساء والمدرسة والعمال والحقوق والكتب. عضو في جمعية محلية، ومعلّم سابق.</p><div class="sig">أوس</div></div></div>
+    <div class="about"><img class="ph" src="https://images.unsplash.com/photo-1697043593488-d496da1e071c?auto=format&fit=crop&w=600&h=800&q=70" alt="الكاتب" style="object-fit:cover;width:100%"><div><div class="kick" style="color:var(--em)">عن الكاتب</div><h2>من أنا؟</h2><p>كاتب من غمراسن، يكتب عن مدينته وبلاده وعن فلسطين، وعن النساء والمدرسة والعمال والحقوق والكتب. عضو في جمعية محلية، ومعلّم سابق.</p><div class="sig">أوس</div></div></div>
   </section>
 </main>
 
@@ -154,7 +154,7 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.95rem}footer .logo{color:var(--
     <div><h5>صفحات</h5><ul><li><a href="#">من أنا؟</a></li><li><a href="#">الصور والفيديوهات</a></li><li><a href="#">بحث</a></li><li><a href="#">RSS</a></li></ul></div>
     <div><h5>تواصل</h5><ul><li><a href="#">فيسبوك</a></li><li><a href="#">يوتيوب</a></li><li><a href="#">البريد الإلكتروني</a></li></ul></div>
   </div>
-  <div class="fb"><span>© 2026 أوس · جميع الحقوق محفوظة</span><span>موقع شخصي، لا إعلانات ولا تتبّع.</span></div>
+  <div class="fb"><span>© 2026 أوس · جميع الحقوق محفوظة</span><span>موقع شخصي، لا إعلانات ولا تتبّع.</span><span>الصور: Unsplash (للعرض فقط)</span></div>
 </div></footer>
 <script src="_toggle.js"></script>
 </body></html>

@@ -25,7 +25,7 @@ header{position:sticky;top:0;z-index:40;background:var(--hdr);backdrop-filter:bl
 .hero .lead{font-family:var(--serif);font-size:1.25rem;line-height:1.95;color:var(--body);max-width:36rem;margin:0 0 1.8rem;font-weight:400}
 .btn{display:inline-flex;align-items:center;min-height:50px;padding:0 1.6rem;font-weight:600;font-size:.9rem;letter-spacing:.02em}
 .btn.b{background:var(--ink);color:var(--bg)}.btn.o{border:1px solid var(--ink);color:var(--ink);margin-inline-start:.6rem}
-.tower{display:flex;flex-direction:column;gap:6px;align-items:stretch}
+.tower{position:relative}.tower img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1) contrast(1.05);display:block}.tower:after{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--gold);pointer-events:none}
 .tower div{height:40px;display:flex;align-items:center;padding-inline:1rem;color:#fff;font-weight:600;font-size:.85rem;box-shadow:inset 0 -3px 0 rgba(0,0,0,.2)}
 .stats{display:flex;gap:3rem;flex-wrap:wrap;border-block:1px solid var(--line);padding:1.6rem 0;margin-top:2.5rem}.stats b{display:block;font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:-.02em}.stats span{color:var(--muted);font-size:.85rem;font-weight:300}
 section{padding:4rem 0}.h2{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:2rem}
@@ -36,7 +36,7 @@ h2{font-weight:800;font-size:2.4rem;margin:0;line-height:1.1;letter-spacing:-.02
 .index .t{font-weight:600;font-size:1.15rem}.index .d{display:block;font-family:var(--serif);color:var(--muted);font-size:.9rem;font-weight:300}.index .c{color:var(--muted);font-size:.8rem;white-space:nowrap;font-weight:300}
 .index .sw{width:10px;height:36px;background:var(--pig);position:absolute;inset-inline-end:0;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .2s}.index a:hover .sw{opacity:1}
 .feat{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem}@media(max-width:860px){.feat{grid-template-columns:1fr}}
-.big{border-top:3px solid var(--ink);padding-top:1.4rem}.big .pill{font-size:.8rem;color:var(--gold);font-weight:600;letter-spacing:.04em}
+.big{border-top:3px solid var(--ink);padding-top:1.4rem}.big .thumb{width:100%;aspect-ratio:16/7;object-fit:cover;display:block;margin-bottom:1.2rem;filter:grayscale(1)}.big:hover .thumb{filter:none}.big .pill{font-size:.8rem;color:var(--gold);font-weight:600;letter-spacing:.04em}
 .big h3{font-size:2.6rem;font-weight:800;margin:.5rem 0;line-height:1.1;letter-spacing:-.02em}.big .ex{font-family:var(--serif);font-size:1.2rem;line-height:1.95;color:var(--body);margin:0}.meta{font-size:.82rem;color:var(--muted);margin-top:1rem;font-weight:300}
 .list{display:flex;flex-direction:column;border-top:3px solid var(--ink)}.row{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:center}
 .row .sw{width:8px;height:40px;background:var(--pig)}.row h4{margin:0;font-size:1.15rem;font-weight:600}.row .m{font-size:.78rem;color:var(--muted);font-weight:300}
@@ -44,7 +44,7 @@ h2{font-weight:800;font-size:2.4rem;margin:0;line-height:1.1;letter-spacing:-.02
 .quote p{font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.5;max-width:44rem;margin:0 auto;font-weight:300}.quote cite{display:block;font-style:normal;color:var(--gold);font-weight:600;margin-top:1.4rem;font-size:.9rem;letter-spacing:.04em}
 .parts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}@media(max-width:760px){.parts{grid-template-columns:1fr 1fr}}
 .parts a{padding:1.6rem 1.4rem;border-inline-start:1px solid var(--line)}.parts a:first-child{border:0}.parts b{display:block;font-size:2.4rem;font-weight:800;line-height:1;color:var(--gold);margin-bottom:.4rem;letter-spacing:-.02em}.parts span{font-weight:600}
-.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}@media(max-width:620px){.gal{grid-template-columns:1fr 1fr}}.gal div{aspect-ratio:1;background:var(--marble);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;font-weight:300}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}@media(max-width:620px){.gal{grid-template-columns:1fr 1fr}}.gal img{aspect-ratio:1;width:100%;object-fit:cover;display:block;filter:grayscale(1);transition:filter .3s}.gal img:hover{filter:none}
 .about{display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:center;border-top:3px solid var(--ink);padding-top:2rem}@media(max-width:620px){.about{grid-template-columns:1fr}}
 .ph{aspect-ratio:3/4;background:linear-gradient(160deg,#d8d6cf,#9c9a92);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;max-width:260px}
 .about h2{margin:.2rem 0}.about p{font-family:var(--serif);font-size:1.1rem;line-height:1.95;color:var(--body);margin:.4rem 0 1.2rem}
@@ -77,9 +77,7 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.9rem;letter-spacing:.04em}foote
     <a class="btn b" href="#books">تصفّح الكتب</a><a class="btn o" href="#">من أنا؟</a>
     <div class="stats"><div><b>17</b><span>نصًّا منشورًا</span></div><div><b>10</b><span>كتب</span></div><div><b>4</b><span>أقسام في كتاب الأضداد</span></div><div><b>2015–2024</b><span>سنوات الكتابة</span></div></div>
   </div>
-  <div class="tower" aria-hidden="true">
-    <div style="background:#27406B;margin-inline-end:8%">كتاب المدينة</div><div style="background:#5B6B35;margin-inline-start:6%">كتاب البلاد</div><div style="background:#8C3A2E;margin-inline-end:3%">كتاب القضية</div><div style="background:#3F3B37;margin-inline-start:10%">كتاب الأضداد</div><div style="background:#6B3A5B">كتاب النساء</div><div style="background:#466784;margin-inline-end:7%">كتاب المدرسة</div><div style="background:#9C6B22;margin-inline-start:4%">كتاب العمال</div><div style="background:#2E6665;margin-inline-end:2%">كتاب الحقوق والحريات</div><div style="background:#6A4A35;margin-inline-start:8%">كتاب الكتب</div><div style="background:#A85A36;margin-inline-end:5%">كتاب الجمعية</div>
-  </div>
+  <div class="tower" aria-hidden="true"><img src="https://images.unsplash.com/photo-1759234676695-ace1299af3f5?auto=format&fit=crop&w=900&h=1125&q=70" alt=""></div>
 </div></div>
 
 <main class="wrap">
@@ -102,7 +100,7 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.9rem;letter-spacing:.04em}foote
   <section>
     <div class="h2"><div><h2>آخر ما كُتب</h2><p class="sub">أحدث النصوص في كلّ الكتب.</p></div><a href="#">كلّ النصوص ←</a></div>
     <div class="feat">
-      <article class="big"><span class="pill">كتاب المدينة</span><h3>الجبل الذي يرانا</h3><p class="ex">في غمراسن لا تنظر أنت إلى الجبل، بل الجبل هو الذي ينظر إليك. تخرج من البيت صباحًا فتجده واقفًا في آخر الزقاق، صامتًا كجدّ لا يتكلّم إلا حين يُسأل. وحين تعود في المساء يكون قد غيّر لونه ثلاث مرّات ولم يغيّر مكانه.</p><div class="meta">14 مارس 2021 · دقيقة قراءة</div></article>
+      <article class="big"><img class="thumb" src="https://images.unsplash.com/photo-1681395944491-aad63cd10e09?auto=format&fit=crop&w=1200&h=525&q=65" alt=""><span class="pill">كتاب المدينة</span><h3>الجبل الذي يرانا</h3><p class="ex">في غمراسن لا تنظر أنت إلى الجبل، بل الجبل هو الذي ينظر إليك. تخرج من البيت صباحًا فتجده واقفًا في آخر الزقاق، صامتًا كجدّ لا يتكلّم إلا حين يُسأل. وحين تعود في المساء يكون قد غيّر لونه ثلاث مرّات ولم يغيّر مكانه.</p><div class="meta">14 مارس 2021 · دقيقة قراءة</div></article>
       <div class="list">
         <a class="row" style="--pig:#A85A36"><span class="sw"></span><span><h4>اجتماع في المقهى</h4><span class="m">كتاب الجمعية · 7 أكتوبر 2023</span></span></a>
         <a class="row" style="--pig:#6A4A35"><span class="sw"></span><span><h4>كتاب على الرفّ الأعلى</h4><span class="m">كتاب الكتب · 26 فيفري 2018</span></span></a>
@@ -123,10 +121,10 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.9rem;letter-spacing:.04em}foote
   </section>
   <section>
     <div class="h2"><div><h2>الصور والفيديوهات</h2><p class="sub">من غمراسن ومن الجمعية.</p></div><a href="#">المعرض ←</a></div>
-    <div class="gal"><div>صورة</div><div>صورة</div><div>فيديو</div><div>صورة</div></div>
+    <div class="gal"><img src="https://images.unsplash.com/photo-1681395527525-84a64ae0f3f0?auto=format&fit=crop&w=600&h=600&q=60" alt=""><img src="https://images.unsplash.com/photo-1565459374854-6fa73a99abf5?auto=format&fit=crop&w=600&h=600&q=60" alt=""><img src="https://images.unsplash.com/photo-1681395944881-434d91bcfef7?auto=format&fit=crop&w=600&h=600&q=60" alt=""><img src="https://images.unsplash.com/photo-1790472690735-30acba16d018?auto=format&fit=crop&w=600&h=600&q=60" alt=""></div>
   </section>
   <section>
-    <div class="about"><div class="ph">صورة الكاتب</div><div><div class="eyebrow">عن الكاتب</div><h2>من أنا؟</h2><p>كاتب من غمراسن، يكتب عن مدينته وبلاده وعن فلسطين، وعن النساء والمدرسة والعمال والحقوق والكتب. عضو في جمعية محلية، ومعلّم سابق.</p><a class="btn o" style="margin:0" href="#">اقرأ السيرة</a></div></div>
+    <div class="about"><img class="ph" src="https://images.unsplash.com/photo-1735063456221-91dcb101285b?auto=format&fit=crop&w=600&h=800&q=70" alt="الكاتب" style="object-fit:cover;width:100%"><div><div class="eyebrow">عن الكاتب</div><h2>من أنا؟</h2><p>كاتب من غمراسن، يكتب عن مدينته وبلاده وعن فلسطين، وعن النساء والمدرسة والعمال والحقوق والكتب. عضو في جمعية محلية، ومعلّم سابق.</p><a class="btn o" style="margin:0" href="#">اقرأ السيرة</a></div></div>
   </section>
 </main>
 
@@ -143,7 +141,7 @@ footer h5{color:#fff;margin:0 0 .6rem;font-size:.9rem;letter-spacing:.04em}foote
     <div><h5>صفحات</h5><ul><li><a href="#">من أنا؟</a></li><li><a href="#">الصور والفيديوهات</a></li><li><a href="#">بحث</a></li><li><a href="#">RSS</a></li></ul></div>
     <div><h5>تواصل</h5><ul><li><a href="#">فيسبوك</a></li><li><a href="#">يوتيوب</a></li><li><a href="#">البريد الإلكتروني</a></li></ul></div>
   </div>
-  <div class="fb"><span>© 2026 أوس · جميع الحقوق محفوظة</span><span>موقع شخصي، لا إعلانات ولا تتبّع.</span></div>
+  <div class="fb"><span>© 2026 أوس · جميع الحقوق محفوظة</span><span>موقع شخصي، لا إعلانات ولا تتبّع.</span><span>الصور: Unsplash (للعرض فقط)</span></div>
 </div></footer>
 <script src="_toggle.js"></script>
 </body></html>
