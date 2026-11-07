@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-page="g" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الخيار G — رخام وذهب · أوس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;800&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfbfa;--surface:#fff;--marble:#f1f1ee;--line:#e4e4df;--muted:#6f6f6a;--body:#3a3a36;--ink:#0b0b0b;--gold:#b08d3a;--gold2:#d4b56a;--gold-soft:#f6f0e2;--hdr:rgba(251,251,250,.9);--prose:#1f1f1c;--display:"Alexandria",sans-serif;--sans:"Alexandria",system-ui,sans-serif;--serif:"Noto Naskh Arabic",serif;color-scheme:light}
+[data-theme=dark]{--bg:#0b0b0b;--surface:#141414;--marble:#171716;--line:#2a2a28;--muted:#9c9c96;--body:#cfcfc9;--ink:#f4f4f1;--gold:#d4b56a;--gold2:#e6cf94;--gold-soft:#1f1b12;--hdr:rgba(11,11,11,.9);--prose:#e4e4df;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg);color:var(--ink);scroll-behavior:smooth}body{margin:0;font-family:var(--sans);line-height:1.75;font-size:16px}a{color:inherit;text-decoration:none}
+.wrap{max-width:80rem;margin-inline:auto;padding-inline:1.25rem}@media(min-width:768px){.wrap{padding-inline:2.5rem}}
+.tag{position:fixed;inset-inline-start:12px;bottom:12px;z-index:50;background:var(--ink);color:var(--bg);font-size:12px;padding:6px 10px;border-radius:999px;opacity:.9}
+#mode{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:0;padding:.35rem .9rem;font:inherit;font-size:.8rem;cursor:pointer;letter-spacing:.02em}
+header{position:sticky;top:0;z-index:40;background:var(--hdr);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:2rem}
+.logo{font-weight:800;font-size:1.5rem;letter-spacing:-.02em}.links{display:flex;gap:2.2rem;font-weight:400;font-size:.92rem;color:var(--body)}.links a.on{color:var(--ink);font-weight:600;border-bottom:2px solid var(--gold);padding-bottom:.2rem}@media(max-width:860px){.links{display:none}}
+.hero{padding:6rem 0 4rem;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:end}@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.tower{display:none}}
+.eyebrow{font-size:.85rem;color:var(--muted);letter-spacing:.06em;font-weight:300}
+.hero h1{font-weight:800;font-size:clamp(3.2rem,9vw,7rem);line-height:1.05;margin:.6rem 0 1.2rem;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.goldline{width:7rem;height:1px;background:var(--gold);margin:1.6rem 0}
+.hero .lead{font-family:var(--serif);font-size:1.25rem;line-height:1.95;color:var(--body);max-width:36rem;margin:0 0 1.8rem;font-weight:400}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 1.6rem;font-weight:600;font-size:.9rem;letter-spacing:.02em}
+.btn.b{background:var(--ink);color:var(--bg)}.btn.o{border:1px solid var(--ink);color:var(--ink);margin-inline-start:.6rem}
+.tower{display:flex;flex-direction:column;gap:6px;align-items:stretch}
+.tower div{height:40px;display:flex;align-items:center;padding-inline:1rem;color:#fff;font-weight:600;font-size:.85rem;box-shadow:inset 0 -3px 0 rgba(0,0,0,.2)}
+.stats{display:flex;gap:3rem;flex-wrap:wrap;border-block:1px solid var(--line);padding:1.6rem 0;margin-top:2.5rem}.stats b{display:block;font-size:2.6rem;font-weight:800;line-height:1;letter-spacing:-.02em}.stats span{color:var(--muted);font-size:.85rem;font-weight:300}
+section{padding:4rem 0}.h2{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:2rem}
+h2{font-weight:800;font-size:2.4rem;margin:0;line-height:1.1;letter-spacing:-.02em}.h2 a{color:var(--gold);font-weight:600;font-size:.9rem}.sub{color:var(--muted);font-size:.95rem;margin:.3rem 0 0;font-weight:300}
+.index{display:grid;grid-template-columns:1fr 1fr;gap:0 4rem}@media(max-width:760px){.index{grid-template-columns:1fr}}
+.index a{display:grid;grid-template-columns:4.5rem 1fr auto;align-items:center;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);position:relative}
+.index .n{font-size:2.4rem;font-weight:800;color:var(--line);line-height:1;letter-spacing:-.03em;transition:color .2s}.index a:hover .n{color:var(--gold)}
+.index .t{font-weight:600;font-size:1.15rem}.index .d{display:block;font-family:var(--serif);color:var(--muted);font-size:.9rem;font-weight:300}.index .c{color:var(--muted);font-size:.8rem;white-space:nowrap;font-weight:300}
+.index .sw{width:10px;height:36px;background:var(--pig);position:absolute;inset-inline-end:0;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .2s}.index a:hover .sw{opacity:1}
+.feat{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem}@media(max-width:860px){.feat{grid-template-columns:1fr}}
+.big{border-top:3px solid var(--ink);padding-top:1.4rem}.big .pill{font-size:.8rem;color:var(--gold);font-weight:600;letter-spacing:.04em}
+.big h3{font-size:2.6rem;font-weight:800;margin:.5rem 0;line-height:1.1;letter-spacing:-.02em}.big .ex{font-family:var(--serif);font-size:1.2rem;line-height:1.95;color:var(--body);margin:0}.meta{font-size:.82rem;color:var(--muted);margin-top:1rem;font-weight:300}
+.list{display:flex;flex-direction:column;border-top:3px solid var(--ink)}.row{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:center}
+.row .sw{width:8px;height:40px;background:var(--pig)}.row h4{margin:0;font-size:1.15rem;font-weight:600}.row .m{font-size:.78rem;color:var(--muted);font-weight:300}
+.quote{text-align:center;padding:4.5rem 1rem;background:var(--marble)}.quote .q{font-size:5rem;line-height:.4;color:var(--gold);margin-bottom:1.8rem;font-family:serif}
+.quote p{font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.5;max-width:44rem;margin:0 auto;font-weight:300}.quote cite{display:block;font-style:normal;color:var(--gold);font-weight:600;margin-top:1.4rem;font-size:.9rem;letter-spacing:.04em}
+.parts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}@media(max-width:760px){.parts{grid-template-columns:1fr 1fr}}
+.parts a{padding:1.6rem 1.4rem;border-inline-start:1px solid var(--line)}.parts a:first-child{border:0}.parts b{display:block;font-size:2.4rem;font-weight:800;line-height:1;color:var(--gold);margin-bottom:.4rem;letter-spacing:-.02em}.parts span{font-weight:600}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}@media(max-width:620px){.gal{grid-template-columns:1fr 1fr}}.gal div{aspect-ratio:1;background:var(--marble);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;font-weight:300}
+.about{display:grid;grid-template-columns:260px 1fr;gap:3rem;align-items:center;border-top:3px solid var(--ink);padding-top:2rem}@media(max-width:620px){.about{grid-template-columns:1fr}}
+.ph{aspect-ratio:3/4;background:linear-gradient(160deg,#d8d6cf,#9c9a92);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;max-width:260px}
+.about h2{margin:.2rem 0}.about p{font-family:var(--serif);font-size:1.1rem;line-height:1.95;color:var(--body);margin:.4rem 0 1.2rem}
+footer{background:var(--ink);color:rgba(255,255,255,.7);margin-top:3rem;padding:4rem 0 1.5rem;font-size:.9rem}[data-theme=dark] footer{background:#050505}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}@media(max-width:760px){.fg{grid-template-columns:1fr 1fr}}
+footer h5{color:#fff;margin:0 0 .6rem;font-size:.9rem;letter-spacing:.04em}footer .logo{color:var(--gold2);font-size:2rem}footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.35rem;font-weight:300}footer a:hover{color:#fff}
+.fb{border-top:1px solid rgba(255,255,255,.12);margin-top:2.4rem;padding-top:1rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-size:.78rem;font-weight:300}
+.preview{background:var(--marble);padding:4rem 0}.label{text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:1.6rem;font-weight:300}
+.art{max-width:46rem;margin-inline:auto;background:var(--surface);padding:3.5rem clamp(1.25rem,5vw,4rem);border-top:3px solid var(--ink)}
+.art .crumb{font-size:.82rem;color:var(--gold);font-weight:600;letter-spacing:.04em}.art h1{font-weight:800;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.1;margin:.5rem 0;letter-spacing:-.02em}.art .meta{margin:0 0 2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--line)}
+.prose{font-family:var(--serif);font-size:1.35rem;line-height:2.05;color:var(--prose)}.prose p{margin:0 0 1.2em}
+.share{display:flex;gap:1.2rem;border-top:1px solid var(--line);padding-top:1.2rem;font-size:.85rem}.share a{font-weight:600;border-bottom:1px solid var(--gold)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.6rem}.pn a{border-top:2px solid var(--ink);padding-top:.7rem;font-weight:600;font-size:1.05rem}.pn small{display:block;color:var(--muted);font-size:.75rem;font-weight:300}
+</style>
+</head>
+<body>
+<span class="tag">الخيار G — رخام وذهب</span>
+<header><div class="wrap nav">
+  <a class="logo" href="#">أوس</a>
+  <nav class="links"><a class="on" href="#">الرئيسية</a><a href="#books">الكتب</a><a href="#">من أنا؟</a><a href="#">الصور والفيديوهات</a><a href="#">بحث</a></nav>
+  <button id="mode" type="button" aria-label="تبديل الوضع الليلي">☾ ليل</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">كاتب من غمراسن · تونس</div>
+    <h1>كلّ ما كتبت،<br>في <em>كتاب</em> واحد.</h1>
+    <div class="goldline"></div>
+    <p class="lead">نصوص عن المدينة والبلاد والقضية، عن النساء والمدرسة والعمال، عن الحقوق والحريات والكتب والجمعية. لا مدوّنة ولا صفحة، بل كتاب مفتوح أبوابه عشرة.</p>
+    <a class="btn b" href="#books">تصفّح الكتب</a><a class="btn o" href="#">من أنا؟</a>
+    <div class="stats"><div><b>17</b><span>نصًّا منشورًا</span></div><div><b>10</b><span>كتب</span></div><div><b>4</b><span>أقسام في كتاب الأضداد</span></div><div><b>2015–2024</b><span>سنوات الكتابة</span></div></div>
+  </div>
+  <div class="tower" aria-hidden="true">
+    <div style="background:#27406B;margin-inline-end:8%">كتاب المدينة</div><div style="background:#5B6B35;margin-inline-start:6%">كتاب البلاد</div><div style="background:#8C3A2E;margin-inline-end:3%">كتاب القضية</div><div style="background:#3F3B37;margin-inline-start:10%">كتاب الأضداد</div><div style="background:#6B3A5B">كتاب النساء</div><div style="background:#466784;margin-inline-end:7%">كتاب المدرسة</div><div style="background:#9C6B22;margin-inline-start:4%">كتاب العمال</div><div style="background:#2E6665;margin-inline-end:2%">كتاب الحقوق والحريات</div><div style="background:#6A4A35;margin-inline-start:8%">كتاب الكتب</div><div style="background:#A85A36;margin-inline-end:5%">كتاب الجمعية</div>
+  </div>
+</div></div>
+
+<main class="wrap">
+  <section id="books">
+    <div class="h2"><div><h2>فهرس الكتب</h2><p class="sub">عشرة أبواب بترتيب الكاتب.</p></div><a href="#">كلّ الكتب ←</a></div>
+    <div class="index">
+      <a href="#" style="--pig:#27406B"><span class="n">01</span><span><span class="t">كتاب المدينة</span><span class="d">عن غمراسن وشؤونها وشجونها</span></span><span class="c">3 نصوص</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#5B6B35"><span class="n">02</span><span><span class="t">كتاب البلاد</span><span class="d">عن تونس، أرضًا وناسًا</span></span><span class="c">نصّان</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#8C3A2E"><span class="n">03</span><span><span class="t">كتاب القضية</span><span class="d">عن فلسطين ونكبتها ومقاومتها</span></span><span class="c">نصّان</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#3F3B37"><span class="n">04</span><span><span class="t">كتاب الأضداد</span><span class="d">أربعة أقسام: ضدّ الموت والنسيان، الجحود، الحيف، العنف</span></span><span class="c">4 نصوص</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#6B3A5B"><span class="n">05</span><span><span class="t">كتاب النساء</span><span class="d">عن نساء عرفتهنّ وقرأت عنهنّ</span></span><span class="c">نصّ واحد</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#466784"><span class="n">06</span><span><span class="t">كتاب المدرسة</span><span class="d">عن التعليم والمعلّمين والتلاميذ</span></span><span class="c">نصّ واحد</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#9C6B22"><span class="n">07</span><span><span class="t">كتاب العمال</span><span class="d">عن الشغل والشغّالين</span></span><span class="c">نصّ واحد</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#2E6665"><span class="n">08</span><span><span class="t">كتاب الحقوق والحريات</span><span class="d">عمّا يُنتزع ولا يُمنح</span></span><span class="c">نصّ واحد</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#6A4A35"><span class="n">09</span><span><span class="t">كتاب الكتب</span><span class="d">عن كتب قرأتها وكتب أحببتها</span></span><span class="c">نصّ واحد</span><span class="sw"></span></a>
+      <a href="#" style="--pig:#A85A36"><span class="n">10</span><span><span class="t">كتاب الجمعية</span><span class="d">عن العمل الجمعياتي وأهله</span></span><span class="c">نصّ واحد</span><span class="sw"></span></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="h2"><div><h2>آخر ما كُتب</h2><p class="sub">أحدث النصوص في كلّ الكتب.</p></div><a href="#">كلّ النصوص ←</a></div>
+    <div class="feat">
+      <article class="big"><span class="pill">كتاب المدينة</span><h3>الجبل الذي يرانا</h3><p class="ex">في غمراسن لا تنظر أنت إلى الجبل، بل الجبل هو الذي ينظر إليك. تخرج من البيت صباحًا فتجده واقفًا في آخر الزقاق، صامتًا كجدّ لا يتكلّم إلا حين يُسأل. وحين تعود في المساء يكون قد غيّر لونه ثلاث مرّات ولم يغيّر مكانه.</p><div class="meta">14 مارس 2021 · دقيقة قراءة</div></article>
+      <div class="list">
+        <a class="row" style="--pig:#A85A36"><span class="sw"></span><span><h4>اجتماع في المقهى</h4><span class="m">كتاب الجمعية · 7 أكتوبر 2023</span></span></a>
+        <a class="row" style="--pig:#6A4A35"><span class="sw"></span><span><h4>كتاب على الرفّ الأعلى</h4><span class="m">كتاب الكتب · 26 فيفري 2018</span></span></a>
+        <a class="row" style="--pig:#2E6665"><span class="sw"></span><span><h4>ما لا يُمنح</h4><span class="m">كتاب الحقوق والحريات · 14 جانفي 2021</span></span></a>
+        <a class="row" style="--pig:#9C6B22"><span class="sw"></span><span><h4>يد الفرن</h4><span class="m">كتاب العمال · 1 ماي 2022</span></span></a>
+        <a class="row" style="--pig:#466784"><span class="sw"></span><span><h4>الطبشور الأخير</h4><span class="m">كتاب المدرسة · 16 سبتمبر 2019</span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="quote"><div class="q">”</div><p>هنا أجمع كلّ ما كتبت: لا مدوّنة ولا صفحة، بل كتاب مفتوح، أبوابه عشرة.</p><cite>— أوس</cite></div>
+
+<main class="wrap">
+  <section>
+    <div class="h2"><div><h2>أقسام كتاب الأضداد</h2><p class="sub">أربعة محاور في كتاب واحد.</p></div></div>
+    <div class="parts"><a href="#"><b>1</b><span>ضد الموت والنسيان</span></a><a href="#"><b>2</b><span>ضد الجحود والنكران</span></a><a href="#"><b>3</b><span>ضد الحيف والحقرة</span></a><a href="#"><b>4</b><span>ضد العنف والإرهاب</span></a></div>
+  </section>
+  <section>
+    <div class="h2"><div><h2>الصور والفيديوهات</h2><p class="sub">من غمراسن ومن الجمعية.</p></div><a href="#">المعرض ←</a></div>
+    <div class="gal"><div>صورة</div><div>صورة</div><div>فيديو</div><div>صورة</div></div>
+  </section>
+  <section>
+    <div class="about"><div class="ph">صورة الكاتب</div><div><div class="eyebrow">عن الكاتب</div><h2>من أنا؟</h2><p>كاتب من غمراسن، يكتب عن مدينته وبلاده وعن فلسطين، وعن النساء والمدرسة والعمال والحقوق والكتب. عضو في جمعية محلية، ومعلّم سابق.</p><a class="btn o" style="margin:0" href="#">اقرأ السيرة</a></div></div>
+  </section>
+</main>
+
+<div class="preview"><div class="wrap"><p class="label">معاينة صفحة نصّ بالخيار G</p>
+<article class="art"><div class="crumb">كتاب المدينة</div><h1>الجبل الذي يرانا</h1><div class="meta">كُتب في 14 مارس 2021 · دقيقة قراءة · المصدر: فيسبوك</div>
+<div class="prose"><p>في غمراسن لا تنظر أنت إلى الجبل، بل الجبل هو الذي ينظر إليك. تخرج من البيت صباحًا فتجده واقفًا في آخر الزقاق، صامتًا كجدّ لا يتكلّم إلا حين يُسأل. وحين تعود في المساء يكون قد غيّر لونه ثلاث مرّات ولم يغيّر مكانه.</p><p>تعلّمت من هذا الجبل أنّ الثبات ليس جمودًا. هو يثبت في مكانه ويتحرّك في ألوانه، ونحن نتحرّك في الأمكنة ونثبت على ما تعلّمناه هنا، بين بيوت الحجر وغرف الحبوب المعلّقة في السفح.</p><p>كلّ من غادر هذه المدينة حمل معه جبلًا صغيرًا في صدره. يُخرجه حين يضيق به الغريب، ويستند إليه.</p></div>
+<div class="share"><span style="color:var(--muted)">شارك:</span><a href="#">واتساب</a><a href="#">فيسبوك</a><a href="#">نسخ الرابط</a></div>
+<div class="pn"><a href="#"><small>النصّ السابق</small>الفطائر وأهلها</a><a href="#" style="text-align:left"><small>النصّ التالي</small>سوق الاثنين</a></div></article></div></div>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div><div class="logo">أوس</div><p style="margin:.4rem 0 0;max-width:30ch;font-weight:300">كلّ ما كتبت، في كتاب واحد. النصوص ملك لكاتبها، يُسمح بالاقتباس مع ذكر المصدر.</p></div>
+    <div><h5>الكتب</h5><ul><li><a href="#">كتاب المدينة</a></li><li><a href="#">كتاب البلاد</a></li><li><a href="#">كتاب القضية</a></li><li><a href="#">كتاب الأضداد</a></li><li><a href="#">… كلّ الكتب</a></li></ul></div>
+    <div><h5>صفحات</h5><ul><li><a href="#">من أنا؟</a></li><li><a href="#">الصور والفيديوهات</a></li><li><a href="#">بحث</a></li><li><a href="#">RSS</a></li></ul></div>
+    <div><h5>تواصل</h5><ul><li><a href="#">فيسبوك</a></li><li><a href="#">يوتيوب</a></li><li><a href="#">البريد الإلكتروني</a></li></ul></div>
+  </div>
+  <div class="fb"><span>© 2026 أوس · جميع الحقوق محفوظة</span><span>موقع شخصي، لا إعلانات ولا تتبّع.</span></div>
+</div></footer>
+<script src="_toggle.js"></script>
+</body></html>
